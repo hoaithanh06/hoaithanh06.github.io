@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <a href="https://hoaithanh06.github.io/">Profile</a>
-  <title>Profile</title>
+  <meta charset="UTF-8">
+  <title>Hoài Thanh | Profile</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <h1>Hoài Thanh</h1>
-  <p>Web Developer | Student</p>
+
+  <!-- Overlay click để bật nhạc -->
+  <div id="startOverlay">
+    <button id="startBtn"> ▶ </button>
+  </div>
+
+  <div class="container hidden">
+    <img src="avatar.jpg" class="avatar">
+
+    <h1>Hoài Thanh</h1>
+    <p class="subtitle"></p>
+    <p class="line-break">FPT Cần Thơ</p>
+
+    <div class="links">
+      <a href="https://www.tiktok.com/@sabadeil" target="_blank">TikTok</a>
+      <a href="https://www.facebook.com/profile.php?id=100059673781031" target="_blank">Facebook</a>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
