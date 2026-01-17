@@ -28,7 +28,7 @@ body {
 
 /* OVERLAY START */
 #startOverlay {
-  position: fixed;
+  position: none;
   inset: 0;
   background: rgba(106, 152, 245, 0.8);
   display: flex;
