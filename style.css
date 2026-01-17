@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* NỀN ẢNH ĐỘNG */
+body {
+  min-height: 100vh;
+  background: url("bg.gif") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+} 
+
+@keyframes bgMove {
+  from {
+    background-size: 100%;
+    background-position: center;
+  }
+  to {
+    background-size: 115%;
+    background-position: center top;
+  }
+}
+
+/* OVERLAY START */
+#startOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(106, 152, 245, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#startBtn {
+  padding: 15px 40px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: #00e6ff;
+  box-shadow: 0 0 20px #00e6ff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #00e6ff; }
+  50% { box-shadow: 0 0 30px #00e6ff; }
+  100% { box-shadow: 0 0 10px #00e6ff; }
+}
+
+/* PROFILE */
+.container {
+  background: rgba(65, 114, 156, 0.6);
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  width: 360px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* AVATAR */
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #00e6ff;
+  box-shadow: 0 0 20px #00e6ff;
+  transition: 0.3s;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 35px #00e6ff;
+}
+
+@keyframes spinGlow {
+  0% { transform: rotate(0); box-shadow: 0 0 10px #00e6ff; }
+  50% { box-shadow: 0 0 30px #00e6ff; }
+  100% { transform: rotate(360deg); box-shadow: 0 0 10px #00e6ff; }
+}
+
+/* LINKS */
+.links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background: transparent;
+  border: 2px solid #00e6ff;
+  color: #00e6ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  background: #00e6ff;
+  color: #7c1919;
+  box-shadow: 0 0 20px #00e6ff;
+}
