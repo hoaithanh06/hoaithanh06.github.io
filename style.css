@@ -26,28 +26,59 @@ body {
   }
 }
 
-/* OVERLAY START */
-#startOverlay {
-  position: none;
-  inset: 0;
-  background: rgba(106, 152, 245, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-#startBtn {
-  padding: 15px 40px;
-  font-size: 18px;
-  border-radius: 30px;
+/* Nút play */
+.play-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
-  background: #00e6ff;
-  box-shadow: 0 0 20px #00e6ff;
-  animation: pulse 1.5s infinite;
+
+  font-size: 32px;
+  color: #00ffd5;
+
+  background: rgba(0, 255, 213, 0.15);
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 213, 0.6),
+    0 0 60px rgba(0, 255, 213, 0.4);
+
+  animation: pulseGlow 1.8s infinite;
+  transition: all 0.3s ease;
 }
 
+/* Hover */
+.play-btn:hover {
+  transform: scale(1.15);
+  box-shadow:
+    0 0 30px rgba(0, 255, 213, 0.9),
+    0 0 90px rgba(0, 255, 213, 0.7);
+}
+
+/* Click */
+.play-btn:active {
+  transform: scale(0.95);
+}
+
+/* Hiệu ứng nhịp */
+@keyframes pulseGlow {
+  0% {
+    box-shadow:
+      0 0 15px rgba(0, 255, 213, 0.4),
+      0 0 40px rgba(0, 255, 213, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(0, 255, 213, 0.9),
+      0 0 90px rgba(0, 255, 213, 0.6);
+  }
+  100% {
+    box-shadow:
+      0 0 15px rgba(0, 255, 213, 0.4),
+      0 0 40px rgba(0, 255, 213, 0.2);
+  }
+}
 @keyframes pulse {
   0% { box-shadow: 0 0 10px #00e6ff; }
   50% { box-shadow: 0 0 30px #00e6ff; }
